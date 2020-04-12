@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="javafx" build-on-make="true" name="mp3">
+  <artifact type="javafx" name="mp3">
     <output-path>$PROJECT_DIR$/out/artifacts/mp3</output-path>
     <root id="root">
       <element id="archive" name="mp3.jar">

@@ -41,6 +41,7 @@ public class Controller {
     int uno = 0, dos =0;
 //    Label winText = new Label(" ");
 
+    // setups play stage
     @FXML
     public void setPlayStage() throws IOException{
         Parent gameView = FXMLLoader.load(getClass().getResource("play.fxml"));
@@ -49,9 +50,9 @@ public class Controller {
         stage.setScene(play);
         stage.show();
 
-
     }
 
+    //setups instruction stage
     @FXML
     public void setInstructions() throws IOException{
         Parent gameView = FXMLLoader.load(getClass().getResource("instructions.fxml"));
@@ -63,6 +64,7 @@ public class Controller {
 
     }
 
+    //reset board contents to FREE
     @FXML
     public void resetBoard(){
         gridBtn.getChildren().toArray(btn);
@@ -81,9 +83,9 @@ public class Controller {
 
     }
 
+    //setup main menu stage
     @FXML
     public void backToMenu() throws IOException{
-        resetBoard();
         Parent mainView = FXMLLoader.load(getClass().getResource("menu.fxml"));
         Scene mainMen = new Scene(mainView);
         Stage stage = (Stage) mainMenu.getScene().getWindow();
@@ -92,19 +94,24 @@ public class Controller {
 
     }
 
+    // board click event
     @FXML
     public void boardClicked(ActionEvent event){
         Button clicked = (Button) event.getTarget();
 
+        // identifies which turn the player is
         player = turn ? "UNO":"DOS";
         textPlayer = textTurn? "UNO":"DOS";
 
+        // checks if player has < 3 moves
         if(uno < 3 || dos <3){
+            // checks if the board placement is FREE
            if(clicked.getText().equals("FREE")){
                gameSelect(clicked);
            }
         }
         else{
+            // checks if the player is picking their own move to replace
             if(clicked.getText().equals(player)){
                 gameSelect(clicked);
             }
@@ -117,36 +124,43 @@ public class Controller {
         stage.close();
     }
 
+    // updates board contents
     public void gameSelect(Button board){
 
+        // checks if player has < 3 moves
         if(uno < 3 || dos < 3){
             if(turn){
                 board.setStyle(" -fx-text-fill: red ");
                 winText.setStyle(" -fx-text-fill: green ");
-                uno++;
+                uno++; // increase number of moves
             }
             else {
                 board.setStyle(" -fx-text-fill: green ");
                 winText.setStyle(" -fx-text-fill: red ");
-                dos++;
+                dos++; // increase number of moves
             }
 
+            // update board
             board.setText(player);
-            turn = !turn;
-            textTurn = !textTurn;
-            winText.setText(textPlayer + "'s Turn");
+
+            turn = !turn; // change turn
+            textTurn = !textTurn; // change turn
+
+            winText.setText(textPlayer + "'s Turn"); // display turn
         }
 
         else{
             if(turn){
-                uno--;
+                uno--; // decrease number of moves when uno == 3
             }
             else {
-                dos--;
+                dos--; // decrease number of moves when dos == 3
             }
-            board.setText("FREE");
+            board.setText("FREE"); // changes selected coordinate's content to FREE
+
             board.setStyle(" -fx-text-fill: black ");
         }
+
         if(checkWin()){
             if(player == "DOS"){
                 winText.setStyle(" -fx-text-fill: green ");
@@ -158,6 +172,7 @@ public class Controller {
         }
     }
 
+    // check winner
     public boolean checkWin(){
         boolean win = false;
 

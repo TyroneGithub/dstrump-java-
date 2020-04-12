@@ -45,6 +45,14 @@
                   <Insets left="160.0" top="-104.0" />
                </VBox.margin>
             </Button>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="500.0" text="by: Go, Polinga, Sta. Maria">
+               <font>
+                  <Font name="Roboto Light" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="-158.0" />
+               </VBox.margin>
+            </Label>
          </children></VBox>
    </children>
 </GridPane>

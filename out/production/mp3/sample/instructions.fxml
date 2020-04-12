@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.Controller"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="203.0" layoutY="22.0" prefHeight="50.0" prefWidth="194.0" text="How to Play">
+         <font>
+            <Font name="Roboto Light" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="108.0" prefHeight="50.0" prefWidth="289.0" text="1. The game is played on a 3x3 grid.">
+         <font>
+            <Font name="Roboto Light" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="143.0" prefHeight="92.0" prefWidth="452.0" style="-fx-line-spacing: 6;" text="2. There are two players UNO and DOS. Players take turns putting their marks in FREE squares." textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Roboto Light" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="215.0" prefHeight="71.0" prefWidth="452.0" style="-fx-line-spacing: 6;" text="3. The first player to get 3 of her marks in a row (horizontally, vertically, or diagonally that always include coordinate (2,2) ) is the winner." textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Roboto Light" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="286.0" prefHeight="103.0" prefWidth="462.0" style="-fx-line-spacing: 6;" text="4. When each player reached 3 turns each and no player has 3 marks in a row,  both players will choose to remove one of their marks and place new ones until a winner is declared." textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Roboto Light" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="playButt" layoutX="221.0" layoutY="424.0" mnemonicParsing="false" onAction="#setPlayStage" prefHeight="32.0" prefWidth="148.0" text="PLAY">
+         <font>
+            <Font name="Roboto Light" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="mainMenu" layoutX="221.0" layoutY="476.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="32.0" prefWidth="148.0" text="MAIN MENU">
+         <font>
+            <Font name="Roboto Light" size="18.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
