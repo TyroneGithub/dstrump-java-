@@ -8,19 +8,20 @@
 <GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
+      <ColumnConstraints />
    </columnConstraints>
    <rowConstraints>
       <RowConstraints />
    </rowConstraints>
    <children>
-      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="500.0">
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="500.0" GridPane.columnIndex="1">
          <children>
             <Label alignment="CENTER" prefHeight="146.0" prefWidth="500.0" text="TIC TAC TOE">
                <font>
                   <Font name="Roboto Light" size="33.0" />
                </font>
             </Label>
-            <Button fx:id="playButt" onAction = "#setPlayStage" alignment="CENTER" mnemonicParsing="false" prefHeight="42.0" prefWidth="172.0" text="PLAY">
+            <Button fx:id="playButt" alignment="CENTER" mnemonicParsing="false" onAction="#setPlayStage" prefHeight="42.0" prefWidth="172.0" text="PLAY">
                <font>
                   <Font name="Roboto Light" size="20.0" />
                </font>
@@ -28,12 +29,20 @@
                   <Insets left="160.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="exitButt" onAction = "#closeStage" alignment="CENTER" layoutX="170.0" layoutY="156.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="172.0" text="EXIT">
+            <Button fx:id="exitButt" alignment="CENTER" layoutX="170.0" layoutY="195.0" mnemonicParsing="false" onAction="#closeStage" prefHeight="42.0" prefWidth="172.0" text="EXIT">
                <font>
                   <Font name="Roboto Light" size="20.0" />
                </font>
                <VBox.margin>
-                  <Insets left="160.0" top="20.0" />
+                  <Insets left="160.0" top="85.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="inButton" alignment="CENTER" layoutX="170.0" layoutY="283.0" mnemonicParsing="false" onAction="#setInstructions" prefHeight="42.0" prefWidth="172.0" text="INSTRUCTIONS">
+               <font>
+                  <Font name="Roboto Light" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="160.0" top="-104.0" />
                </VBox.margin>
             </Button>
          </children></VBox>

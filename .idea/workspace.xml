@@ -6,7 +6,18 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/sample/instructions.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/mp3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/mp3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mp3/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mp3/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mp3/sample/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mp3/sample/menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mp3/sample/play.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mp3/sample/play.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/play.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/play.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,8 +79,12 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1ZyURqJnqLgcMdGVOK8zdBwUzB0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -189,6 +204,9 @@
       <workItem from="1585810828512" duration="7243000" />
       <workItem from="1585820996585" duration="1037000" />
       <workItem from="1585822967995" duration="12386000" />
+      <workItem from="1586573316305" duration="58000" />
+      <workItem from="1586573902463" duration="3070000" />
+      <workItem from="1586662161771" duration="3671000" />
     </task>
     <servers />
   </component>
@@ -208,37 +226,37 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1585816243153" />
-    <state x="412" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585834622075">
+    <state x="412" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586665502892">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="412" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1585834622075" />
+    <state x="412" y="148" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1586665502892" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1585834521056">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1585834521056" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1585835710973">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1586665440078">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1585835710973" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1585835710973">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1586665440078" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1586665440077">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1585835710973" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1585835710973">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1586665440077" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1586665440077">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1585835710973" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1585835710973">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1586665440077" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1586665440078">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1585835710973" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1585834633504">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1586665440078" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1586665514937">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1585834633504" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1585824913347">
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1586665514937" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1586665123965">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1585824913347" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1586665123965" />
   </component>
 </project>

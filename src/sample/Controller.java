@@ -28,6 +28,7 @@ public class Controller {
     @FXML public Label winText;
     @FXML public Button playButt;
     @FXML public Button exitButt;
+    @FXML public Button inButton;
     @FXML public Button reset;
     @FXML public Button mainMenu;
     @FXML public GridPane gridBtn;
@@ -35,8 +36,8 @@ public class Controller {
     Button[] btn = new Button[9];
     boolean turn = true;
     boolean textTurn = false;
-    String player = turn ? "X":"O";
-    String textPlayer = textTurn? "X":"O";
+    String player = turn ? "UNO":"DOS";
+    String textPlayer = textTurn? "UNO":"DOS";
     int uno = 0, dos =0;
 //    Label winText = new Label(" ");
 
@@ -52,17 +53,30 @@ public class Controller {
     }
 
     @FXML
+    public void setInstructions() throws IOException{
+        Parent gameView = FXMLLoader.load(getClass().getResource("instructions.fxml"));
+        Scene play = new Scene(gameView);
+        Stage stage = (Stage) inButton.getScene().getWindow();
+        stage.setScene(play);
+        stage.show();
+
+
+    }
+
+    @FXML
     public void resetBoard(){
         gridBtn.getChildren().toArray(btn);
 
         for(Button b : btn){
-            b.setText("");
+            b.setText("FREE");
+            b.setStyle(" -fx-text-fill: black ");
         }
         uno = 0;
         dos = 0;
         turn = true;
-        textTurn = turn;
-        textPlayer = textTurn? "X":"O";
+        textTurn = !turn;
+        textPlayer = !textTurn? "UNO": "DOS";
+        winText.setStyle(" -fx-text-fill: red ");
         winText.setText(textPlayer + "'s Turn");
 
     }
@@ -82,12 +96,11 @@ public class Controller {
     public void boardClicked(ActionEvent event){
         Button clicked = (Button) event.getTarget();
 
-        player = turn ? "X":"O";
-        textPlayer = textTurn? "X":"O";
-
+        player = turn ? "UNO":"DOS";
+        textPlayer = textTurn? "UNO":"DOS";
 
         if(uno < 3 || dos <3){
-           if(clicked.getText().equals("")){
+           if(clicked.getText().equals("FREE")){
                gameSelect(clicked);
            }
         }
@@ -108,9 +121,13 @@ public class Controller {
 
         if(uno < 3 || dos < 3){
             if(turn){
+                board.setStyle(" -fx-text-fill: red ");
+                winText.setStyle(" -fx-text-fill: green ");
                 uno++;
             }
             else {
+                board.setStyle(" -fx-text-fill: green ");
+                winText.setStyle(" -fx-text-fill: red ");
                 dos++;
             }
 
@@ -127,12 +144,16 @@ public class Controller {
             else {
                 dos--;
             }
-            board.setText("");
+            board.setText("FREE");
+            board.setStyle(" -fx-text-fill: black ");
         }
-
-
-
         if(checkWin()){
+            if(player == "DOS"){
+                winText.setStyle(" -fx-text-fill: green ");
+            }
+            else{
+                winText.setStyle(" -fx-text-fill: red ");
+            }
             winText.setText(player + " WINS!");
         }
     }
