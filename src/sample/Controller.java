@@ -146,19 +146,31 @@ public class Controller {
             turn = !turn; // change turn
             textTurn = !textTurn; // change turn
 
-            winText.setText(textPlayer + "'s Turn"); // display turn
+            if(uno ==3 && dos == 3){
+                winText.setText(textPlayer + " remove a piece");
+            }
+            else{
+                winText.setText(textPlayer + "'s Turn"); // display turn
+            }
+
         }
 
         else{
             if(turn){
+                winText.setStyle(" -fx-text-fill: red ");
+                textPlayer = "UNO";
                 uno--; // decrease number of moves when uno == 3
             }
             else {
+                winText.setStyle(" -fx-text-fill: green ");
+                textPlayer = "DOS";
                 dos--; // decrease number of moves when dos == 3
             }
-            board.setText("FREE"); // changes selected coordinate's content to FREE
 
+            winText.setText(textPlayer + "'s Turn"); // display turn
+            board.setText("FREE"); // changes selected coordinate's content to FREE
             board.setStyle(" -fx-text-fill: black ");
+
         }
 
         if(checkWin()){
