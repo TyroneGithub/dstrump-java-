@@ -36,8 +36,8 @@ public class Controller {
     Button[] btn = new Button[9];
     boolean turn = true;
     boolean textTurn = false;
-    String player = turn ? "UNO":"DOS";
-    String textPlayer = textTurn? "UNO":"DOS";
+    String player = turn ? "DOS":"UNO";
+    String textPlayer = textTurn? "DOS":"UNO";
     int uno = 0, dos =0;
 //    Label winText = new Label(" ");
 
@@ -77,7 +77,7 @@ public class Controller {
         dos = 0;
         turn = true;
         textTurn = !turn;
-        textPlayer = !textTurn? "UNO": "DOS";
+        textPlayer = !textTurn? "DOS": "UNO";
         winText.setStyle(" -fx-text-fill: red ");
         winText.setText(textPlayer + "'s Turn");
 
@@ -100,8 +100,8 @@ public class Controller {
         Button clicked = (Button) event.getTarget();
 
         // identifies which turn the player is
-        player = turn ? "UNO":"DOS";
-        textPlayer = textTurn? "UNO":"DOS";
+        player = turn ? "DOS":"UNO";
+        textPlayer = textTurn? "DOS":"UNO";
 
         // checks if player has < 3 moves
         if(uno < 3 || dos <3){
@@ -158,12 +158,12 @@ public class Controller {
         else{
             if(turn){
                 winText.setStyle(" -fx-text-fill: red ");
-                textPlayer = "UNO";
+                textPlayer = "DOS";
                 uno--; // decrease number of moves when uno == 3
             }
             else {
                 winText.setStyle(" -fx-text-fill: green ");
-                textPlayer = "DOS";
+                textPlayer = "UNO";
                 dos--; // decrease number of moves when dos == 3
             }
 
@@ -174,7 +174,7 @@ public class Controller {
         }
 
         if(checkWin()){
-            if(player == "DOS"){
+            if(player == "UNO"){
                 winText.setStyle(" -fx-text-fill: green ");
             }
             else{
